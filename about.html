@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>About | Strand After Dark</title>
+  <meta name="description" content="An independent guide to adult nightlife on the Grand Strand.">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root { --gold:#d4af37; --ink:#0d0b10; --panel:#17131c; --line:#2c2433; --muted:#b9b1c2; }
+    body { background:var(--ink); color:#eee; font-family:'Inter',sans-serif; }
+    h1,h2,h3,.navbar-brand { font-family:'Playfair Display',serif; }
+    a { color:var(--gold); }
+    .navbar { background:rgba(13,11,16,.95); border-bottom:1px solid var(--line); }
+    .navbar-brand span { color:var(--gold); }
+    .hero { padding:110px 0 80px; background:radial-gradient(ellipse at top, #3a1f45 0%, var(--ink) 70%); text-align:center; }
+    .hero h1 { font-size:clamp(2.2rem,5vw,3.6rem); }
+    .hero p { color:var(--muted); max-width:680px; margin:1rem auto 0; font-size:1.1rem; }
+    .eyebrow { color:var(--gold); letter-spacing:.2em; text-transform:uppercase; font-size:.8rem; font-weight:600; }
+    .section { padding:70px 0; }
+    .club-card { background:var(--panel); border:1px solid var(--line); border-radius:14px; height:100%; transition:transform .2s, border-color .2s; }
+    .club-card:hover { transform:translateY(-4px); border-color:var(--gold); }
+    .club-card .card-body { padding:1.6rem; }
+    .club-card h3 { font-size:1.4rem; margin-bottom:.25rem; }
+    .rank { display:inline-block; background:var(--gold); color:#000; font-weight:700; border-radius:50px; padding:2px 12px; font-size:.8rem; margin-bottom:.8rem; }
+    .area { color:var(--gold); font-size:.85rem; font-weight:600; text-transform:uppercase; letter-spacing:.08em; }
+    .club-card p { color:var(--muted); }
+    .meta { list-style:none; padding:0; margin:0; font-size:.92rem; }
+    .meta li { padding:.3rem 0; border-top:1px solid var(--line); color:#ddd; }
+    .meta i { color:var(--gold); margin-right:.5rem; }
+    .btn-gold { background:var(--gold); color:#000; font-weight:600; border:none; }
+    .btn-gold:hover { background:#e8c65a; color:#000; }
+    .btn-outline-gold { border:1px solid var(--gold); color:var(--gold); }
+    .btn-outline-gold:hover { background:var(--gold); color:#000; }
+    .feature { background:linear-gradient(135deg,#2a1633,#120e16); border:1px solid var(--gold); border-radius:18px; padding:2.5rem; }
+    .tip { background:var(--panel); border-left:3px solid var(--gold); padding:1.2rem 1.4rem; border-radius:8px; height:100%; }
+    .tip h4 { font-size:1.05rem; font-weight:600; }
+    .tip p { color:var(--muted); margin:0; font-size:.95rem; }
+    footer { border-top:1px solid var(--line); padding:40px 0; color:var(--muted); font-size:.9rem; }
+    footer a { color:var(--muted); text-decoration:none; }
+    footer a:hover { color:var(--gold); }
+  </style>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+  <div class="container">
+    <a class="navbar-brand fw-bold" href="index.html">Strand <span>After Dark</span></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+    <div class="collapse navbar-collapse" id="nav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="index.html">Clubs</a></li>
+        <li class="nav-item"><a class="nav-link" href="index.html#tips">Club Tips</a></li>
+        <li class="nav-item"><a class="nav-link active" href="about.html">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<header class="hero" style="padding:90px 0 60px">
+  <div class="container">
+    <div class="eyebrow mb-3">About</div>
+    <h1>About Strand After Dark</h1>
+  </div>
+</header>
+
+<section class="section pt-4">
+  <div class="container" style="max-width:780px">
+    <p>Strand After Dark is an independent guide to adult nightlife along South Carolina's Grand Strand. We keep a simple, up-to-date list of the area's gentlemen's clubs so visitors can see what's open, where it is, and what to expect before heading out.</p>
+    <p>We aren't owned by or affiliated with any of the clubs we list, and we don't sell tickets or bottle service. Listings are based on public information and are reviewed regularly, but hours and policies change often — please confirm directly with the venue before you go.</p>
+    <p>Spot something out of date, or run a business you'd like us to take a look at? We'd like to hear from you.</p>
+    <a href="contact.html" class="btn btn-gold mt-2">Contact Us</a>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="row g-4">
+      <div class="col-md-5">
+        <div class="navbar-brand fw-bold text-white mb-2" style="font-family:'Playfair Display',serif">Strand <span style="color:var(--gold)">After Dark</span></div>
+        <p class="mb-0">An independent directory of strip clubs and adult nightlife in Myrtle Beach and the Grand Strand. For adults 21+.</p>
+      </div>
+      <div class="col-6 col-md-3">
+        <h6 class="text-white">Directory</h6>
+        <ul class="list-unstyled">
+          <li><a href="index.html#clubs">Strip Clubs</a></li>
+          <li><a href="index.html#tips">Club Tips</a></li>
+        </ul>
+      </div>
+      <div class="col-6 col-md-4">
+        <h6 class="text-white">Site</h6>
+        <ul class="list-unstyled">
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+    <hr style="border-color:var(--line)">
+    <p class="small mb-0">&copy; 2026 Strand After Dark. Independent listings — not affiliated with any club. Hours and details change; confirm with the venue before visiting.</p>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
