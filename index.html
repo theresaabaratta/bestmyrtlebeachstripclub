@@ -21,10 +21,12 @@
     .hero p { color:var(--muted); max-width:680px; margin:1rem auto 0; font-size:1.1rem; }
     .eyebrow { color:var(--gold); letter-spacing:.2em; text-transform:uppercase; font-size:.8rem; font-weight:600; }
     .section { padding:70px 0; }
-    .club-card { background:var(--panel); border:1px solid var(--line); border-radius:14px; height:100%; transition:transform .2s, border-color .2s; }
+    .section-intro { color:var(--muted); max-width:640px; }
+    .club-card { --bs-card-color:#eee; --bs-card-bg:var(--panel); color:#eee; background:var(--panel); border:1px solid var(--line); border-radius:14px; height:100%; transition:transform .2s, border-color .2s; }
     .club-card:hover { transform:translateY(-4px); border-color:var(--gold); }
     .club-card .card-body { padding:1.6rem; }
-    .club-card h3 { font-size:1.4rem; margin-bottom:.25rem; }
+    .club-card h3 { font-size:1.4rem; margin-bottom:.25rem; color:#fff; }
+    .club-card:hover h3 { color:var(--gold); }
     .rank { display:inline-block; background:var(--gold); color:#000; font-weight:700; border-radius:50px; padding:2px 12px; font-size:.8rem; margin-bottom:.8rem; }
     .area { color:var(--gold); font-size:.85rem; font-weight:600; text-transform:uppercase; letter-spacing:.08em; }
     .club-card p { color:var(--muted); }
@@ -35,9 +37,16 @@
     .btn-gold:hover { background:#e8c65a; color:#000; }
     .btn-outline-gold { border:1px solid var(--gold); color:var(--gold); }
     .btn-outline-gold:hover { background:var(--gold); color:#000; }
-    .feature { background:linear-gradient(135deg,#2a1633,#120e16); border:1px solid var(--gold); border-radius:18px; padding:2.5rem; }
+    .feature { background:linear-gradient(135deg,#2a1633,#120e16); border:1px solid var(--gold); border-radius:18px; padding:2.5rem; height:100%; }
+    .feature h2 { color:#fff; }
+    .feature p { color:#d9d2e0; }
+    .price-tag { display:inline-block; font-family:'Playfair Display',serif; font-size:2.4rem; font-weight:800; color:var(--gold); line-height:1; }
+    .price-tag small { font-family:'Inter',sans-serif; font-size:.9rem; font-weight:500; color:var(--muted); }
+    .check-list { list-style:none; padding:0; margin:1rem 0 0; }
+    .check-list li { padding:.25rem 0; color:#ddd; }
+    .check-list i { color:var(--gold); margin-right:.5rem; }
     .tip { background:var(--panel); border-left:3px solid var(--gold); padding:1.2rem 1.4rem; border-radius:8px; height:100%; }
-    .tip h4 { font-size:1.05rem; font-weight:600; }
+    .tip h4 { font-size:1.05rem; font-weight:600; color:#fff; }
     .tip p { color:var(--muted); margin:0; font-size:.95rem; }
     footer { border-top:1px solid var(--line); padding:40px 0; color:var(--muted); font-size:.9rem; }
     footer a { color:var(--muted); text-decoration:none; }
@@ -54,7 +63,8 @@
       {"@type":"ListItem","position":3,"item":{"@type":"NightClub","name":"Lust Gentlemen's Club & Steakhouse","address":{"@type":"PostalAddress","streetAddress":"804 Seaboard St","addressLocality":"Myrtle Beach","addressRegion":"SC","postalCode":"29577"},"telephone":"(843) 839-5878"}},
       {"@type":"ListItem","position":4,"item":{"@type":"NightClub","name":"The Treasure Club","address":{"@type":"PostalAddress","streetAddress":"716 Seaboard St","addressLocality":"Myrtle Beach","addressRegion":"SC","postalCode":"29577"},"telephone":"(843) 945-2270"}},
       {"@type":"ListItem","position":5,"item":{"@type":"NightClub","name":"Tiffany's Cabaret","address":{"@type":"PostalAddress","streetAddress":"132 April Gray Ln","addressLocality":"Myrtle Beach","addressRegion":"SC","postalCode":"29579"},"telephone":"(843) 236-2691"}},
-      {"@type":"ListItem","position":6,"item":{"@type":"EntertainmentBusiness","name":"Grand Strand Gent","url":"https://grandstrandgent.com","areaServed":"Myrtle Beach, SC"}}
+      {"@type":"ListItem","position":6,"item":{"@type":"EntertainmentBusiness","name":"Grand Strand Gent","url":"https://grandstrandgent.com","areaServed":"Myrtle Beach, SC"}},
+      {"@type":"ListItem","position":7,"item":{"@type":"EntertainmentBusiness","name":"Michael At Your Place","url":"https://michaelatyourplace.com","areaServed":"Myrtle Beach, SC","priceRange":"$300"}}
     ]
   }
   </script>
@@ -68,6 +78,7 @@
     <div class="collapse navbar-collapse" id="nav">
       <ul class="navbar-nav ms-auto">
         <li class="nav-item"><a class="nav-link active" href="index.html">Clubs</a></li>
+        <li class="nav-item"><a class="nav-link" href="index.html#male-strippers">Male Strippers</a></li>
         <li class="nav-item"><a class="nav-link" href="index.html#tips">Club Tips</a></li>
         <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
         <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
@@ -83,6 +94,7 @@
     <p>Every gentlemen's club on the Grand Strand in one place — where they are, when they're open, and which one fits your night out, from Seaboard Street to North Myrtle Beach.</p>
     <div class="mt-4 d-flex gap-2 justify-content-center flex-wrap">
       <a href="#clubs" class="btn btn-gold btn-lg px-4">See the Clubs</a>
+      <a href="#male-strippers" class="btn btn-outline-gold btn-lg px-4">Book a Male Stripper</a>
     </div>
   </div>
 </header>
@@ -92,7 +104,7 @@
     <div class="text-center mb-5">
       <div class="eyebrow">The Directory</div>
       <h2 class="display-6">Myrtle Beach Gentlemen's Clubs</h2>
-      <p class="text-secondary mx-auto" style="max-width:640px">The Grand Strand once had more than a dozen clubs. Today it's a tighter list — which makes picking the right one easier.</p>
+      <p class="section-intro mx-auto">The Grand Strand once had more than a dozen clubs. Today it's a tighter list — which makes picking the right one easier.</p>
     </div>
 
     <div class="row g-4">
@@ -195,15 +207,44 @@
 
 <section class="section pt-0" id="male-strippers">
   <div class="container">
-    <div class="feature">
-      <div class="row align-items-center g-4">
-        <div class="col-lg-8">
-          <div class="eyebrow mb-2">Male Strippers in Myrtle Beach</div>
-          <h2 class="mb-3">Looking for a Male Stripper? Book Grand Strand Gent.</h2>
-          <p class="text-light-emphasis mb-0">There's no male club on the Grand Strand, so bachelorette and birthday groups book a private entertainer instead. Our pick is <a href="https://grandstrandgent.com" target="_blank" rel="noopener"><strong>Grand Strand Gent</strong></a> — a solo male entertainer who brings an interactive show to your beach house, condo, or rental anywhere from Pawleys Island to North Myrtle Beach.</p>
+    <div class="text-center mb-5">
+      <div class="eyebrow">Male Strippers in Myrtle Beach</div>
+      <h2 class="display-6">No Male Club? Book One to Your Rental.</h2>
+      <p class="section-intro mx-auto">There's no male club on the Grand Strand, so bachelorette and birthday groups bring the show to their beach house, condo, or rental instead. Here are the two we recommend.</p>
+    </div>
+    <div class="row g-4">
+      <!-- Grand Strand Gent -->
+      <div class="col-lg-6">
+        <div class="feature d-flex flex-column">
+          <div class="eyebrow mb-2">Our Pick · Solo Entertainer</div>
+          <h2 class="mb-3">Grand Strand Gent</h2>
+          <p>A solo male entertainer who brings an interactive show to your beach house, condo, or rental anywhere from Pawleys Island to North Myrtle Beach.</p>
+          <ul class="check-list mb-4">
+            <li><i class="bi bi-check2-circle"></i>Private in-home shows</li>
+            <li><i class="bi bi-check2-circle"></i>Pawleys Island to North Myrtle Beach</li>
+            <li><i class="bi bi-check2-circle"></i>Bachelorettes &amp; birthdays</li>
+          </ul>
+          <div class="mt-auto">
+            <a href="https://grandstrandgent.com" class="btn btn-gold btn-lg px-4" target="_blank" rel="noopener">Visit Grand Strand Gent</a>
+          </div>
         </div>
-        <div class="col-lg-4 text-lg-end">
-          <a href="https://grandstrandgent.com" class="btn btn-gold btn-lg px-4" target="_blank" rel="noopener">Visit Grand Strand Gent</a>
+      </div>
+
+      <!-- Michael At Your Place -->
+      <div class="col-lg-6">
+        <div class="feature d-flex flex-column">
+          <div class="eyebrow mb-2">Best for Groups · Flat Rate</div>
+          <h2 class="mb-3">Michael At Your Place</h2>
+          <p>Michael At Your Place now services groups across Myrtle Beach and the Grand Strand. One simple flat rate for your whole party — no surprise add-ons, just a fun, interactive show at your rental.</p>
+          <div class="my-2"><span class="price-tag">$300 <small>per group show</small></span></div>
+          <ul class="check-list mb-4">
+            <li><i class="bi bi-check2-circle"></i>Groups of all sizes</li>
+            <li><i class="bi bi-check2-circle"></i>Comes to your beach house, condo, or hotel</li>
+            <li><i class="bi bi-check2-circle"></i>Serving the whole Grand Strand</li>
+          </ul>
+          <div class="mt-auto">
+            <a href="https://michaelatyourplace.com" class="btn btn-gold btn-lg px-4" target="_blank" rel="noopener">Book Michael — $300</a>
+          </div>
         </div>
       </div>
     </div>
@@ -237,6 +278,7 @@
         <ul class="list-unstyled">
           <li><a href="index.html#clubs">Strip Clubs</a></li>
           <li><a href="https://grandstrandgent.com" target="_blank" rel="noopener">Grand Strand Gent</a></li>
+          <li><a href="https://michaelatyourplace.com" target="_blank" rel="noopener">Michael At Your Place</a></li>
           <li><a href="index.html#tips">Club Tips</a></li>
         </ul>
       </div>
